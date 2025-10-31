@@ -1,0 +1,306 @@
+@import "mocha.css";
+
+window {
+    /* `otf-font-awesome` is required to be installed for icons */
+    /*font-family: "0xProto Nerd Font Regular", sans-serif, "Font Awesome 5"; */
+	font-family: "OpenDyslexicAlt Nerd Font", sans-serif, "Font Awesome 5";
+    font-size: 14px;
+    border-radius: 10px;
+    color: @text;
+}
+
+* {
+    color: @text;
+    border-radius: 10px;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+    background-color: alpha(@base, .1);
+}
+
+window#waybar.chromium {
+    background-color: @base;
+    border: none;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    /*box-shadow: inset 0 -3px transparent;*/
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 20px;
+    background: alpha(@base, .6);
+    /* background: transparent; */
+    transition: 120ms ease-in;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background-color: alpha(shade(@blue, .3), .4);
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+    background-color: shade(@blue, 0.5);
+}
+
+#workspaces {
+    background: alpha(@base, .8);
+    border-radius: 18px;
+    padding: 4px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+#workspaces button {
+    border-radius: 50%;
+    padding: 2px 6px;
+    color: @blue;
+    font-size: 18px;
+}
+
+#workspaces button.active {
+    background: alpha(shade(@blue, .5), .6);
+}
+
+#workspaces button.urgent {
+    background-color: alpha(shade(@orange, 0.6), .3);
+}
+
+#custom-notifications {
+    background: alpha(@base, .6);
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 12px;
+    border-radius: 20px;
+
+}
+
+#custom-notifications:hover {
+    background: alpha(@blue, .5);
+}
+
+#mode {
+    background-color: alpha(@yellow, .3);
+    box-shadow: inset 0 -3px @text;
+}
+
+#clock,
+#battery{
+      background-color: alpha(@base, .6);
+      padding-left: 12px;
+      padding-right: 12px;
+      border-radius: 20px;
+}
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network {
+    background-color: alpha(@base, .6);
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px; 
+}
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#custom-weather,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+
+#power-profiles-daemon {
+    background-color: alpha(@base, .6);
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+}
+
+#mpd {
+    padding: 0 10px;
+    color: @text;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    background-color: alpha(@base, .6);
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+}
+
+#battery {
+    background-color: alpha(@base, .6);
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+    color: @text;
+}
+
+#battery.charging, #battery.plugged {
+    color: @text;
+    background-color: alpha(@base, .6);
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+}
+
+#battery:not(.plugged):not(.charging) {
+    background-color: alpha(@blue, .35);
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+}
+
+@keyframes blink {
+    to {
+        background-color: alpha(@crust, .3);
+        color: @orange;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: alpha(shade(@orange, 0.5), .3);
+    color: @text;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: shade(@blue, 0.4);
+}
+
+#cpu {
+    background-color: alpha(@base, .6);
+    color: @text;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+}
+
+#memory {
+    background-color: alpha(@base, .6);
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+}
+
+#disk {
+    background-color: @base;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+}
+
+#pulseaudio {
+    background-color: alpha(@base, .6);
+    color: @text;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+}
+
+#wireplumber {
+    background-color: alpha(@base, .6);
+    color: @text;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+}
+
+#custom-media,custom-weather {
+    background-color: alpha(@base, .6);
+    color: @text;
+    min-width: 100px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+}
+
+#custom-media.custom-spotify {
+    background-color: alpha(shade(@green, .65), .3);
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+}
+
+#temperature {
+    background-color: alpha(@base, .6);
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+}
+
+#temperature.critical {
+    background-color: alpha(@red, .3);
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+}
+
+#tray {
+    background-color: alpha(@base, .6);
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background: alpha(@orange, .3);
+}
+
+#scratchpad {
+    background: alpha(@base, .6);
+}
+
+#scratchpad.empty {
+    background-color: transparent;
+}

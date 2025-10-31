@@ -1,0 +1,7 @@
+exec fbpanel &
+exec conky -c .conkyrc.openbox &
+exec xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
+exec nitrogen --restore &
+exec xscreensaver &
+sh /home/poiuyt/mouse.sh
+exec nm-applet

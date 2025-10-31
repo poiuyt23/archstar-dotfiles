@@ -1,0 +1,7 @@
+nitrogen --restore &
+tint2 &
+conky -c .config/conky/conkyrc &
+xcompmgr&
+xbindkeys&
+xscreensaver --nosplash &
+

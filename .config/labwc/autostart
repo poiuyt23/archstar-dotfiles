@@ -1,0 +1,8 @@
+/usr/lib/polkit-kde-authentication-agent-1 &
+xhost +SI:localuser:poiuyt &
+#conky --pause=2 -dc .config/conky/conkyrc &
+waybar &
+swww-daemon &
+waypaper --random &
+udiskie &
+

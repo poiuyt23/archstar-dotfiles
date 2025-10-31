@@ -1,0 +1,75 @@
+conky.config=
+{
+ 	alignment='middle_left',
+	background= false,
+
+	update_interval=10,
+	total_run_times=0,
+	double_buffer=true,
+	text_buffer_size = 2048,
+	minimum_width = 288,
+	maximum_width = 288,
+
+	cpu_avg_samples = 2 ,
+	net_avg_samples = 2 ,
+	use_xft = true,
+	font = 'Ubuntu Nerd Font : size 16',
+	override_utf8_locale = true,
+
+	own_window = true,
+	own_window_type = 'desktop',
+	own_window_argb_visual = true,
+	own_window_argb_value = 240,
+ 	own_window_colour = '#ffffff',
+
+	own_window_hints ='above,undecorated,sticky,skip_taskbar,skip_pager',
+
+	draw_shades = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+
+	default_color = '#111100',
+	default_outline_color = '#dddddd',
+	draw_outline=true
+
+}
+conky.text=[[
+${voffset -17}${font Ubuntu Nerd Font : size=108}${offset -74}${color #D80621}󰚍󰚍
+${alignc}${color #1793d1}󰣇${voffset -15}
+${alignc}${color #ebcb40}${voffset -15}
+${alignc}${color #777777}󰣘${voffset -0}
+${voffset -50}${font WS Simple Gallifreyan:style=Regular : size=60}${color #d4af37}WHD
+${voffset -80}${alignc}${font Ubuntu Nerd Font : size=108}${color #dd8421}󰛄
+${voffset -860}${font Ubuntu Nerd Font : size=15}${color} - c ${alignr}Conky
+ - e ${alignr} File Manager
+ - n ${alignr} WiFi setup
+ - t ${alignr} Kitty (terminal)
+ - f ${alignr} Firefox
+ - a ${alignr} Application Menu
+ - m ${alignr} Apple Music
+ - v ${alignr} Toggle Home VPN
+${hr 2}
+ - 1 ${alignr} GoToDesktop 1
+ - 2 ${alignr} GoToDesktop 2
+ - 3 ${alignr} GoToDesktop 3
+ - 4 ${alignr} GoToDesktop 4
+ - alt - 1 ${alignr} SendToDesktop 1
+ - alt - 2 ${alignr} SendToDesktop 2
+ - alt - 3 ${alignr} SendToDesktop 3
+ - alt - 4 ${alignr} SendToDesktop 4
+ - alt - Left ${alignr}  desktop++
+ - alt - Right ${alignr} desktop--
+${hr 2}
+alt - Left ${alignr}  snap left
+alt - Right ${alignr}  snap right
+alt - Up ${alignr}  snap up
+alt - Down ${alignr}  snap down
+ - Left ${alignr} 󱦒 screen left edge
+ - Right ${alignr} 󱦒 screen right edge
+ - Up ${alignr} 󱦒 screen top
+ - Down ${alignr} 󱦒 screen bottom
+${hr 2}
+ - q ${alignr} Exit Application
+ - 󰘶 - q ${alignr} Exit Wayland
+${voffset -860}
+]]

@@ -1,0 +1,76 @@
+# For the benefit of emacs users: -*- shell-script -*-
+###########################
+# xbindkeys configuration #
+###########################
+#
+# Version: 1.8.5
+#
+# If you edit this file, do not forget to uncomment any lines
+# that you change.
+# The pound(#) symbol may be used anywhere for comments.
+#
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h
+# The XK_ is not needed.
+#
+# List of modifier:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Super_L, Mod5 (Scroll).
+#
+
+# The release modifier is not a standard X modifier, but you can
+# use it if you want to catch release events instead of press events
+
+# By defaults, xbindkeys does not pay attention with the modifiers
+# NumLock, CapsLock and ScrollLock.
+# Uncomment the lines above if you want to pay attention to them.
+
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+# Examples of commands:
+"xbindkeys_show" 
+  control+shift + q
+
+"systemctl suspend"
+   Control+Alt + s
+"xscreensaver-command -lock"
+   Control+Alt + l
+"$HOME/scripts/show_keybinds.sh"
+   Alt+Mod4 + k
+"kitty"
+   Alt+Mod4 + t
+"firefox"
+   Alt+Mod4 + f
+"brave"
+   Alt+Mod4 + b 
+"sudo /home/poiuyt/scripts/brightness_up.sh"
+   Mod4+Alt + F6
+"sudo /home/poiuyt/scripts/brightness_down.sh"
+   Mod4+Alt + F5
+"$HOME/scripts/toggle_touchpad.sh"
+   Mod4+Alt + F9
+"urxvt -e $HOME/scripts/light_up.sh"
+   Mod4+Alt + F4
+"urxvt -e $HOME/scripts/light_down.sh"
+   Mod4+Alt + F3
+"$HOME/scripts/toggle_touchpad.sh"
+   Mod4+Alt + F9
+"urxvt -e sudo wifi-menu"
+   Mod4+Alt + n
+"urxvt -e alsamixer"
+   Mod4+Alt + m
+
+
+##################################
+# End of xbindkeys configuration #
+##################################

@@ -1,0 +1,52 @@
+# Ignore everything in the home directory by default
+*
+
+# Negate (include) specific dotfiles and directories
+# The leading slash ensures the path matching starts at the repository root (your home directory)
+
+# Common dotfiles
+!.gitignore
+
+!/.zshrc
+!/.profile
+!/.gitconfig
+!/.vimrc
+!/.xbindkeysrc
+
+# Configuration directories
+!/.config/
+!/.config/rofi.poiuyt/
+!/.config/rofi.poiuyt/**
+!/.config/waypaper/
+!/.config/waypaper/**
+!/.config/wttr/
+!/.config/wttr/**
+!/.config/fastfetch/
+!/.config/fastfetch/**
+!/.config/fish/
+!/.config/fish/**
+!/.config/hypr/
+!/.config/hypr/**
+!/.config/HyprPanel/
+!/.config/HyprPanel/**
+!/.config/waybar/
+!/.config/waybar/**
+!/.config/conky/
+!/.config/conky/**
+!/.config/openbox/
+!/.config/openbox/**
+!/.config/labwc/
+!/.config/labwc/**
+!/.config/tint2/
+!/.config/tint2/**
+!/.config/kitty/
+!/.config/kitty/**
+!/.config/nvim/
+!/.config/nvim/**
+!/.config/obmenu-generator/
+!/.config/obmenu-generator/**
+
+
+
+# Other specific dotfiles or directories you want to track
+

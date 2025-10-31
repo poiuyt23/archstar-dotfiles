@@ -1,0 +1,66 @@
+conky.config=
+	{
+	alignment='middle_right',
+	background= false,
+
+	update_interval=1 ,
+	total_run_times=0 ,
+	double_buffer=true, 
+	text_buffer_size = 2048,
+
+	cpu_avg_samples = 2 ,
+	net_avg_samples = 2 ,
+	use_xft = true,
+	font = 'Adobe Helvetica:size15',
+	override_utf8_locale = true,
+
+	own_window = true, 
+	own_window_type ='normal',
+	own_window_argb_visual = true,
+	own_window_argb_value = 128,
+
+	own_window_hints ='below,undecorated,sticky,skip_taskbar,skip_pager',
+
+	draw_shades = false,
+	draw_outline = true,
+	draw_borders = false,
+	draw_graph_borders = true,
+
+
+	color1 = 'afffff',
+	default_outline = 'black',
+}
+conky.text=[[
+$alignc${font Helvetica:size=27}${color1}${nodename}${font}
+${color 111111}${hr 5}
+${font Helvetica:size=16}${color1}${sysname} ${kernel} ${alignr}${machine}${font}
+${color 222222}${hr 1}
+${color1}Uptime ${alignr}${uptime}
+${exec lscpu | grep "Model name" | awk '{print$3" "$4" "$5}'}  ${alignr}${freq cpu} mhz
+Memory Used ${alignr}${mem}/${memmax}
+CPU temp ${alignr}${hwmon 1 temp 1} C
+CPU Usage $alignr${cpu cpu0}%
+#${color 222222}${hr 1}
+${voffset 10}${cpugraph 0 42,370 33ff33 ff3333 -t}
+${voffset -45}${color1} CPU History
+
+${font}${color ff3333}${top name 1} $alignr ${top cpu 1} %
+${font}${color1}${top name 2} $alignr ${top cpu 2} %
+${font}${color1}${top name 3} $alignr ${top cpu 3} %
+${font}${color1}${top name 4} $alignr ${top cpu 4} %
+${font}${color1}${top name 5} $alignr ${top cpu 5} %
+${voffset 10}${color 151590}${membar 30 ,370 }
+${color1}${voffset -36} Memory ${alignr}${mem} / ${memperc}% 
+
+${font}${color ff3333}${top_mem name 1} $alignr${top_mem mem_res 1}
+${font}${color1}${top_mem name 2} $alignr${top_mem mem_res 2}
+${font}${color1}${top_mem name 3} $alignr${top_mem mem_res 3}
+${font}${color1}${top_mem name 4} $alignr${top_mem mem_res 4}
+${font}${color1}${top_mem name 5} $alignr${top_mem mem_res 5}
+${color1 222222}${hr 1}
+${voffset 5}${color 056605}${battery_bar 30,370 BAT1}
+${color}${voffset -40} Battery  ${alignr}${battery_percent BAT1}% 
+
+
+
+]]
