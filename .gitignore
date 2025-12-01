@@ -47,6 +47,9 @@
 !/.config/obmenu-generator/
 !/.config/obmenu-generator/**
 
+!/.dotfiles/
+!/.dotfiles/**
+
 
 
 # Other specific dotfiles or directories you want to track
