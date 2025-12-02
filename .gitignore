@@ -12,6 +12,7 @@
 !/.gitconfig
 !/.vimrc
 !/.xbindkeysrc
+!/screenshot.png
 
 # Configuration directories
 !/.config/

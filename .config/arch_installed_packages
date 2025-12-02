@@ -172,6 +172,7 @@ gnu-netcat
 gnulib-l10n
 gnupg
 gnutls
+go
 gobject-introspection-runtime
 gparted
 gperf
@@ -227,10 +228,11 @@ hwloc
 hyprcursor
 hyprgraphics
 hyprland
+hyprland-guiutils
 hyprland-qt-support
-hyprland-qtutils
 hyprlang
 hyprpaper
+hyprtoolkit
 hyprutils
 hyprwayland-scanner
 iana-etc
@@ -316,6 +318,7 @@ libblockdev-loop
 libblockdev-mdraid
 libblockdev-nvme
 libblockdev-part
+libblockdev-smart
 libblockdev-swap
 libbluray
 libbpf
@@ -882,6 +885,7 @@ sratom
 srt
 starship
 startup-notification
+stow
 subversion
 sudo
 suitesparse
@@ -986,10 +990,12 @@ xvidcore
 xxhash
 xz
 yay
+yay-debug
 yyjson
 zeromq
 zimg
 zix
 zlib
 zlib-ng
+zsh
 zstd
