@@ -5,4 +5,5 @@ waybar &
 swww-daemon &
 waypaper --random &
 udiskie &
+nm-applet &
 

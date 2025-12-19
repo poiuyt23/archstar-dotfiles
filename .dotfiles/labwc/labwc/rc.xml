@@ -380,7 +380,7 @@
   <mouse>
     <!-- time is in ms -->
     <doubleClickTime>500</doubleClickTime>
-    <scrollFactor>1.0</scrollFactor>
+    <!-- <scrollFactor>1.0</scrollFactor>  -->
     <context name="Frame">
       <mousebind button="A-Left" action="Press">
         <action name="Focus"/>
